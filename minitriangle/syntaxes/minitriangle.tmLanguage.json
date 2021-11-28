@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MiniTriangle",
+	"patterns": [
+		{
+			"include": "#control"
+		},
+		{
+			"include": "#command"
+		},
+		{
+			"include": "#operator"
+		}
+	],
+	"repository": {
+		"control": {
+			"patterns": [{
+				"name": "keyword.control.minitriangle",
+				"match": "\\b(let|in|var|if|then|else|while|do|begin|end)\\b"
+			}]
+		},
+		"command": {
+			"patterns": [{
+				"name": "entity.name.function.minitriangle",
+				"match": "\\b(getint|printint)\\b"
+			}]
+		},
+		"operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.comparison.minitriangle",
+					"match": "<=|>=|==|!=|<|>"
+				},
+				{
+					"name": "keyword.operator.assignment.minitriangle",
+					"match": ":="
+				},
+				{
+					"name": "keyword.operator.minitriangle",
+					"match": "\\*|/|-|\\+"
+				}
+			]
+		}
+	},
+	"scopeName": "source.mt"
+}

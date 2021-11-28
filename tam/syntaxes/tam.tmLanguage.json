@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "TAM",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.tam",
+				"match": "\\b(LOADL|LOAD|STORE|GETINT|PUTINT|JUMP|JUMPIFZ|Label|HALT|ADD|SUB|MUL|DIV|NEG|AND|OR|NOT|LSS|GTR|EQL)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.test",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.test",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.tam"
+}

@@ -1,0 +1,25 @@
+{
+    "name": "tam",
+    "displayName": "TAM",
+    "description": "TAM",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.62.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "tam",
+            "aliases": ["TAM", "tam"],
+            "extensions": [".tam"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "tam",
+            "scopeName": "source.tam",
+            "path": "./syntaxes/tam.tmLanguage.json"
+        }]
+    }
+}
